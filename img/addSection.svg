@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>addSection</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="17.9753086" height="17.918552" rx="8.95927602"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="17.9753086" height="17.918552" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="1.0-Main-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main" transform="translate(-646.000000, -112.000000)">
+            <g id="Group-13" transform="translate(225.000000, 109.000000)">
+                <g id="addSection" transform="translate(421.000000, 3.000000)">
+                    <g id="profile_calltoaction-copy" stroke-width="2" stroke="#32393D">
+                        <g id="secondary_button">
+                            <use id="button" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                    <g id="addChannel-Copy" transform="translate(5.461538, 5.000000)" fill="#32393D">
+                        <rect id="Rectangle-19-Copy-15" x="0" y="3.26573427" width="7.73513298" height="2" rx="1"></rect>
+                        <rect id="Rectangle-19-Copy-15" transform="translate(3.867566, 4.265734) rotate(-270.000000) translate(-3.867566, -4.265734) " x="1.1098883e-13" y="3.26573427" width="7.73513298" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
