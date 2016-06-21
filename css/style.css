@@ -6,10 +6,12 @@ html, body{
 }
 
 .wrapper{
-  margin-left: 200px;
+  margin-left: 185px;  /*185/1440 = 0.12847*/
 
 }
-
+/*============================================
+/////////////// Navigation (Left) ///////////////
+==============================================*/
 nav{
     position: fixed;
     height: 100%;
@@ -18,26 +20,135 @@ nav{
     left: 0;
     background: white;
     width: 185px;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
-/* =====Team===== */
+/*============================================
+/////////////// Team Avatar & Name ///////////////
+==============================================*/
+.team {
+    margin: 1.5rem 0 0 1rem; /*20px 13px in mockups*/
+}
 .teamAvatar{
-  /* Rectangle 2545: */
-  width: 34px;
-  height: 34px;
+  width: 2rem;
+  height: 2rem;
   background: #F55054;
   border-radius: 4px;
-  margin:20px 0 0 13px;
+  display: inline-block;
+  text-align: center;
+  /*float: left;*/
+
+}
+.teamName{
+   font-size: 1.1rem;
+   /*posision absolute & line-height & vertical-align = Made this span algin middle with others*/
+   position: absolute;
+   line-height: 2rem;
+   vertical-align: middle;
+   display: inline-block;
+   margin-left: 1rem;
+   padding-right: 1rem;
+
+}
+/*============================================
+/////////////// Board ///////////////
+==============================================*/
+
+/*============================================
+Problem: How to algin addMember with addBoards
+==============================================*/
+.board{
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.boards{
+    display: inline-block;
+}
+.addBoards{
+    display: inline-block;
+    background-color: transparent;
+    border:0;
+    position: absolute;
+    right: 1rem;
+}
+/*============================================
+Problem: How to do a hover effect on svg
+==============================================*/
+.addBoards .svg:hover path{
+   fill: #2EBFD9;
+}
+
+/*============================================
+/////////////// Board Group ///////////////
+==============================================*/
+.boardGroup{
+   margin-top: 1.5rem;
+   /*margin-left: 2rem;*/
+}
+.boardGroup ul{
+   margin-top: 1.5rem;
+   list-style-type: none;
+   text-decoration: none;
+   padding: 0;
+   /*margin-left: 2rem;*/
+}
+.boardGroup ul a{
+   text-decoration: none;
+   color: inherit;
+}
+.boardGroup li.selected{
+    background-color: #F5F6F5;
+}
+.boardGroup li.selected a{
+    color: #2EBFD9;
+}
+.boardName{
+   font-size: 1rem;
+   padding-left: 2rem;
+   padding-top: 0.8rem;
+   padding-bottom: 0.8rem;
+   /*============================================
+   Problem:A small gap on the right edge
+   ==============================================*/
+   padding-right: 0;
+}
+
+#board1:hover{
+    background-color: #F5F6F5;
+}
+#board2:hover{
+    background-color: #F5F6F5;
+}
+#board3:hover{
+    background-color: #F5F6F5;
+}
+#board4:hover{
+    background-color: #F5F6F5;
+}
+#board5:hover{
+    background-color: #F5F6F5;
+}
+
+/*============================================
+/////////////// Member ///////////////
+==============================================*/
+
+.avatar{
+  width: 40px;
+  height: 40px;
   float: left;
-
+  margin-top: 30px;
+  margin-left: 1em;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
-.team .teamName{
-   padding: 30px 0 0 63px;
-   font-size: 20px;
-}
-
-/* =====User===== */
+/*============================================
+/////////////// User ///////////////
+==============================================*/
 .user{
   clear: left;
   margin-top: 250px;
@@ -62,127 +173,65 @@ nav{
    color: #9EA3B3;
 }
 
-/* =====Board===== */
-.boards {
-  margin-top: 40px;
-  margin-left: 16px;
-  font-size: 18px;
-  font-weight: bold;
-  flex-grow: 1;
-  display: inline-flex;
-  flex-direction: column;
-}
-.addBoards{
-  flex-grow: 1;
-  display: inline-flex;
-  background-color: transparent;
-  border:0;
-  padding-top:6px;
-  margin-left: 70px;
-}
-/*============================================
-Problem: How to do a hover effect on svg
-==============================================*/
-.addBoards .svg:hover path{
-   fill: #2EBFD9;
 
-}
 
-.boardGroup{
-   font-size: 14px;
-   margin-top: 15px;
-   margin-left: 32px;
-}
-
-.boardName{
-   font-size: 14px;
-   margin-top: 18px;
-
-}
-
-#general:hover{
-  background-color: #F5F6F5;
-}
-
-/* =====Member===== */
-.members{
-  margin-top: 40px;
-  margin-left: 16px;
-  font-size: 18px;
-  font-weight: bold;
-  flex-grow: 1;
-  display: inline-flex;
-  flex-direction: column;
-}
-/*============================================
-Problem: How to algin addMember with addBoards
-==============================================*/
-.addMembers{
-  flex-grow: 1;
-  display: inline-flex;
-  margin-left: 50px;
-}
-.avatar{
-  width: 40px;
-  height: 40px;
-  float: left;
-  margin-top: 30px;
-  margin-left: 1em;
-  position: relative;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-/* ==========Section========= */
+/* ==========Dashboard========= */
 
 #right{
-  background: rgb(240, 245, 245);
+  background: #F6F7F6;
   flex-grow: 1;
-  height: 1200px;
-/*   Can't fix the height?' */
+  padding-bottom: 30px;
 }
+
 .top-nav{
   /*margin: 40px 0 0 40px;*/
 }
 
-
-
-
  /*===== Search Box =====*/
- #namanyay-search-box {
- background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
- background-color: white;
- padding: 10px 0 10px 40px;
- margin: 40px 0 0 2.2vw;
- border-radius:10px 0 0 10px;
- -moz-border-radius:10px 0 0 10px;
- -webkit-border-radius:10px 0 0 10px;
- -o-border-radius:10px 0 0 10px;
- border:0 none;
- width:365px;
- height: 40px;
- flex-grow: 1;
+ /*============================================
+ Problem: Search box and actions
+ ==============================================*/
+ .top-nav .search{
+     margin: 3rem 0 0 2.5rem;
+     display: inline-block;
+ }
+
+ #search-box {
+     background: #ededed url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+     background-color: white;
+     padding: 10px 0 10px 40px;
+     /*margin: 3rem 0 0 3rem;*/
+     border-radius:10px 0 0 10px;
+     -moz-border-radius:10px 0 0 10px;
+     -webkit-border-radius:10px 0 0 10px;
+     -o-border-radius:10px 0 0 10px;
+     border:0 none;
+     width:365px;
+     height: 40px;
+     /*flex-grow: 1;*/
 }
 
 .actions{
   display: inline-block;
+  position: absolute;
+  right: 2.5rem;
   vertical-align: top;
-  margin: 40px 0 0 45vw;
+  margin: 3rem 0 0 2.5rem;
 }
 /*===== Activites =====*/
-svg polygon:hover{
-  fill:red;
-}
+svg:hover #profile_calltoaction-copy { fill: #2EBFD9;  stroke: #2EBFD9;}
+svg:hover #addChannel-Copy {fill: white;}
 /*===== Add Link=====*/
 .addLink{
   padding: 0 0 0 40px;
 }
 
-/*===== Section=====*/
+/*============================================
+/////////////// Section ///////////////
+==============================================*/
 #sections{
   padding: 10px 0 10px 0px;
-  margin: 40px 0 0 1vw;
+  margin: 3rem 2.5rem;
 }
 #sections ul{
   list-style:none;
@@ -197,240 +246,226 @@ svg polygon:hover{
 	text-decoration:none;
 	font-weight:700;
 	font-size:18px;
-	line-height:32px;
-	padding:0 30px;
+	line-height:2rem;
+	padding:0 2rem;
+}
+
+#sections ul li.current-menu-item a{
+	color:#2EBFD9;
+    font-weight: normal;
+}
+#sections ul li a{
+	font-weight: normal;
+}
+
+#sections ul li a:hover{
+    color:#2EBFD9;
+    background-color:transparent;
+    text-decoration:none;
 }
 /*============================================
-PROBLEM
+###Problem: how to animate svg i.g. chaning color
 ==============================================*/
-#sections ul li.current-menu-item{
-	color:#2EBFD9;
-}
-#sections ul li:hover{
-	color:#2EBFD9;
-  background-color:transparent;
-  text-decoration:none;
+#sections ul li a img{
+
 }
 
-/* ===== Links =====*/
+
+
+/*============================================
+/////////////// ALL Posts ///////////////
+==============================================*/
 .allBox{
-  margin: 100px 2vw 0;
+  margin: 3rem .2% 0;    /*Mockups: 40px*/
+  perspective: 800px;
 }
 
-.wrapper{
-  display: flex;
-  height: 100%;
-  width: 100%;
+.post-date{
+    font-weight: normal;
+    font-size: 1.2rem; /*Mockup: 20px*/
+    color: #B8B8BD;
+    margin: 0 2rem;
 }
 
 .box{
   /*  w280 h 268  */
   width: 17vw;
-  height: 17vw;
-  margin: 1.7vw;
-  border-radius: 8px;
+  height: 18vw;
+  margin: 1.5%;
+  border-radius: 6px;
   background: white;
-  display: inline-flex;
+  display: none;
   flex-direction: column;
   vertical-align: top;
 }
 
-.box-top1{
-  background: green;
-  flex-grow: 1;
-  background-image: url('http://abduzeedo.com/files/originals/b04ef937670265.574c2f7bec405.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
+@media all and (max-width: 1300px){
+    .box{
+        height: 22vw;
+    }
 }
 
-.box-bottom1{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
+@media all and (max-width: 1200px){
+    .box{
+        height: 26vw;
+    }
 }
 
-.box-top2{
-  background: green;
-  flex-grow: 1;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-image: url('https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/05/bem-website-tools-opt.png');
-  background-size: cover;
-  background-position: 50%;
+/*============================================
+/////////////// Apply to all ///////////////
+==============================================*/
+.box-bottom{
+    background: white;
+    flex-grow: 1;
+    margin: 0 1rem;
 }
 
-.box-bottom2{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
+.box-bottom h4{
+    margin: 1rem 0;
+    font-size: 15px;
+    /*line-height: 24px;*/
+    font-weight: bold;
+    color: #333333;
 }
 
-.box-top3{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/69dc6a37082913.Y3JvcCwxNDYwLDExNDIsNDYsNDQ.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
+.comment{
+    position: relative;
+    width: 100%;
+    border-top: solid 1px #EDEDED;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    /*margin-top: -1rem;*/
+}
+.comment a{
+    text-decoration: none;
+    color: #558DFF;
 }
 
-.box-bottom3{
-  background: white;
-  flex-grow: 1;
-    margin: 9px 23px;
+.comment-mata span{
+    display: inline-block;
+    text-align: center;
+}
+.cm-avatar{
+}
+.cm-name{
+    position: absolute;
+    /*line-height & vertical-align = Made this span algin middle with others*/
+    line-height: 24px;
+    vertical-align: middle;
+    margin-left: 1rem;
+    padding: auto 0;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #B4B9C2;
 }
 
-.box-top4{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://ph-files.imgix.net/3bcbe521-1dab-48f2-9902-a215daecca58?auto=format&fit=max&h=570&w=430');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
+.cm-date{
+    /*position & right = Made this span algin to right*/
+    position: absolute;
+    right: 0rem;
+    line-height: 24px;
+    vertical-align: middle;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #B4B9C2;
 }
-.box-bottom4{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
+.message{
+    font-size: 0.8rem;
+    font-weight: normal;
+    margin-top: 7px;
 }
+.box-top{
+    position: relative;
+    height: 30%;
+    background: white;
+    flex-grow: 1;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-size: cover;
+    background-position: 50%;
+}
+/*============================================
+/////////////// Post-1 ///////////////
+==============================================*/
+.box-img1{
+    background-image: url('http://api.screenshotlayer.com/api/capture?access_key=6c3294cb9c76465ece38d4c5b222239e&width=400&url=https://developer.apple.com/ios/human-interface-guidelines/&secret_key=3d3244557c9901c13df053ca7d0ffb16&delay=3');
+}
+/*============================================
+/////////////// Post-2 ///////////////
+==============================================*/
+.box-img2{
+    background-image: url('https://media-mediatemple.netdna-ssl.com/wp-content/uploads/2016/05/bem-website-tools-opt.png');
+}
+/*============================================
+/////////////// Post-3 ///////////////
+==============================================*/
+.box-img3{
+    background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/69dc6a37082913.Y3JvcCwxNDYwLDExNDIsNDYsNDQ.jpg');
+}
+/*============================================
+/////////////// Post-4 ///////////////
+==============================================*/
+.box-img4{
+    background-image:
+    url('https://ph-files.imgix.net/3bcbe521-1dab-48f2-9902-a215daecca58?auto=format&fit=max&h=570&w=430');
+}
+/*============================================
+/////////////// Post-5 ///////////////
+==============================================*/
+.box-img5{
+    background-image:
+    url('https://tctechcrunch2011.files.wordpress.com/2015/12/shutterstock_279072494.png?w=680');
+}
+/*============================================
+/////////////// Post-6 ///////////////
+==============================================*/
+.box-img6{
+    background-image:
+    url('https://d13yacurqjgara.cloudfront.net/users/413551/screenshots/2760257/bugspl.jpg');
+}
+/*============================================
+/////////////// Post-7 ///////////////
+==============================================*/
+.box-img7{
+    background-image:
+    url('http://www.awwwards.com/awards/submissions/2016/05/57458f2211aed.jpeg');
+}
+/*============================================
+/////////////// Post-8 ///////////////
+==============================================*/
+.box-img8{
+    background-image:
+    url('https://dl4rygnmrir77.cloudfront.net/muzli_feed/wp-content/uploads/2016/06/06112004/08.jpg');
+}
+/*============================================
+/////////////// Post-9 ///////////////
+==============================================*/
+.box-img9{
+    background-image:
+    url('https://www.supremo.tv/typeterms/press-kit/screenshot2.jpg');
+}
+/*============================================
+/////////////// Post-10 ///////////////
+==============================================*/
+.box-img10{
+    background-image:
+    url('https://i.redditmedia.com/m-AVpUbWjSEoFSLCzvlLj0-AKI4-dXFxaukEt75upGs.jpg?w=1024&s=d3327377fd670568c88f7fc24f7dda7c');
+}
+/*============================================
+/////////////// Post-11 ///////////////
+==============================================*/
+.box-img11{
+    background-image:
+    url('https://www.apple.com/swift/playgrounds/images/og.png?201606101159');
+}
+/*============================================
+/////////////// Post-12 ///////////////
+==============================================*/
+.box-img12{
+    background-image:
+    url('http://principlerepo.com/wp-content/uploads/2016/05/preview.gif');
 
-.box-top5{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://tctechcrunch2011.files.wordpress.com/2015/12/shutterstock_279072494.png?w=680');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
 }
-.box-bottom5{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-
-.box-top6{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://d13yacurqjgara.cloudfront.net/users/413551/screenshots/2760257/bugspl.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom6{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-.box-top7{
-  background: green;
-  flex-grow: 1;
-  background-image: url('http://www.awwwards.com/awards/submissions/2016/05/57458f2211aed.jpeg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom7{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-
-.box-top8{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://dl4rygnmrir77.cloudfront.net/muzli_feed/wp-content/uploads/2016/06/06112004/08.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom8{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-
-.box-top9{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://www.supremo.tv/typeterms/press-kit/screenshot2.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom9{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-
-.box-top10{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/33504635968889.Y3JvcCw5OTgsNzgxLDAsOTIw.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom10{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-
-.box-top10{
-  background: green;
-  flex-grow: 1;
-  background-image: url('https://tctechcrunch2011.files.wordpress.com/2016/06/planner-general-availability-2.png?w=680');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom10{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-.box-top11{
-  background: green;
-  flex-grow: 1;
-  background-image: url('http://www.piedpiper.com/app/themes/pied-piper/dist/images/interface_large.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom11{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-.box-top12{
-  background: green;
-  flex-grow: 1;
-  background-image: url('http://1.design-milk.com/images/2016/06/3D-Lamp-kit-Rowan-Jackman-5-600x901.jpg');
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  background-size: cover;
-  background-position: 50%;
-}
-.box-bottom12{
-  background: white;
-  flex-grow: 1;
-  margin: 9px 23px;
-}
-
-
 
 
 
